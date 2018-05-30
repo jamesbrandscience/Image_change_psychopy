@@ -1,0 +1,258 @@
+<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="1.85.1">
+  <Settings>
+    <Param name="Monitor" updates="None" val="laptop" valType="str"/>
+    <Param name="color" updates="None" val="black" valType="str"/>
+    <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
+    <Param name="Experiment info" updates="None" val="{u'gender (m/f)': u'', u'age': u'', u'participant': u''}" valType="code"/>
+    <Param name="JS libs" updates="None" val="packaged" valType="str"/>
+    <Param name="Units" updates="None" val="pix" valType="str"/>
+    <Param name="Save excel file" updates="None" val="False" valType="bool"/>
+    <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
+    <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
+    <Param name="Window size (pixels)" updates="None" val="[1280, 800]" valType="code"/>
+    <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
+    <Param name="blendMode" updates="None" val="avg" valType="str"/>
+    <Param name="Use version" updates="None" val="latest" valType="str"/>
+    <Param name="HTML path" updates="None" val="html" valType="str"/>
+    <Param name="Save csv file" updates="None" val="False" valType="bool"/>
+    <Param name="OSF Project ID" updates="None" val="" valType="str"/>
+    <Param name="Save log file" updates="None" val="False" valType="bool"/>
+    <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Show mouse" updates="None" val="False" valType="bool"/>
+    <Param name="Data filename" updates="None" val="u'data' + os.sep + '%s_%s' % (expInfo['participant'], expInfo['date'])" valType="code"/>
+    <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
+    <Param name="expName" updates="None" val="rand_display_pilot1" valType="str"/>
+    <Param name="logging level" updates="None" val="warning" valType="code"/>
+    <Param name="Screen" updates="None" val="1" valType="num"/>
+  </Settings>
+  <Routines>
+    <Routine name="mask1">
+      <DotsComponent name="dots">
+        <Param name="color" updates="constant" val="$[1.0,1.0,1.0]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="fieldPos" updates="constant" val="(0.0, 0.0)" valType="code"/>
+        <Param name="speed" updates="constant" val="0.4" valType="code"/>
+        <Param name="noiseDots" updates="None" val="walk" valType="str"/>
+        <Param name="dotLife" updates="None" val="1" valType="code"/>
+        <Param name="units" updates="None" val="norm" valType="str"/>
+        <Param name="refreshDots" updates="None" val="repeat" valType="str"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="fieldShape" updates="constant" val="circle" valType="str"/>
+        <Param name="coherence" updates="constant" val="1.0" valType="code"/>
+        <Param name="nDots" updates="constant" val="5000" valType="code"/>
+        <Param name="stopVal" updates="constant" val="0.5" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fieldSize" updates="constant" val="4.0" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="signalDots" updates="None" val="same" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="name" updates="None" val="dots" valType="code"/>
+        <Param name="dotSize" updates="constant" val="2" valType="code"/>
+        <Param name="dir" updates="constant" val="0" valType="code"/>
+      </DotsComponent>
+    </Routine>
+    <Routine name="trial_prac">
+      <CodeComponent name="setImage_2">
+        <Param name="Begin Experiment" updates="constant" val="#in this experiment a body will appear on the screen&amp;#10;#the stimuli will change with a button press of up, down, left, right&amp;#10;#this will change the image stimuli being presented&amp;#10;#the stimuli have file names using integers that will be changed on the button press&amp;#10;#e.g. 1_5_2.png is a very thin body, facing right, so the filename is weight_orientation.png&amp;#10;#as weight changes, the body weight (really the body mass index) changes too, e.g. 10_5.png is large weight&amp;#10;#as orientation changes, the direction of the body will change too, e.g. 1_4.png is slightly less left facing&amp;#10;#weight varies from 1-10&amp;#10;#orientation varies from 1-5&amp;#10;&amp;#10;import re&amp;#10;&amp;#10;#create a list of image numbers as strings 1-10, this is for the weight of the body&amp;#10;imgList=[&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;]&amp;#10;#create a list of image numbers as strings 1-5, this is for the orientation of the body&amp;#10;imgList2=[&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;,&quot;5&quot;]&amp;#10;&amp;#10;#set size of images&amp;#10;size1 = (109, 271)&amp;#10;&amp;#10;imgChoice1=&quot;&quot;" valType="extendedCode"/>
+        <Param name="name" updates="None" val="setImage_2" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="#create a list of image numbers as strings 1-10, this is for the weight of the body&amp;#10;imgList=[&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;]&amp;#10;#create a list of image numbers as strings 1-5, this is for the orientation of the body&amp;#10;imgList2=[&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;,&quot;5&quot;]&amp;#10;&amp;#10;imgChoice1=&quot;&quot;&amp;#10;&amp;#10;#generate a random number between 1 and 10 for the starting image to be presented as&amp;#10;imgStart=randint(1,10)&amp;#10;imgStart2=randint(1,5)" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="#save data&amp;#10;#uncomment the code below if you want the data to be stored&amp;#10;&amp;#10;#trials.addData('imgChoice1', imgChoice1)&amp;#10;#trials.addData('choice_trial', choice_trial)&amp;#10;#trials.addData('choice_trial_size', choice_trial_size)&amp;#10;#trials.addData('choice_trial_view', choice_trial_view)" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="import re&amp;#10;&amp;#10;#create a list of image numbers as strings 1-10, this is for the weight of the body&amp;#10;imgList=[&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;, &quot;10&quot;]&amp;#10;#create a list of image numbers as strings 1-5, this is for the orientation of the body&amp;#10;imgList2=[&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;,&quot;5&quot;]&amp;#10;&amp;#10;#set the initial starting image, this will be a random configiration of size and orientation&amp;#10;imgChoice=str(imgStart)&amp;#10;imgChoice2=str(imgStart2)&amp;#10;&amp;#10;#if loop for to set the image, dependent on checkKeys_2 code component&amp;#10;if imgChoice in imgList:&amp;#10;  imgChoice1=&quot;stims/&quot;+imgChoice+&quot;_&quot;+imgChoice2+&quot;.png&quot;&amp;#10;&amp;#10;#create a variable to store which image size and orientation is selected&amp;#10;choice_trial=re.sub(&quot;[^0-9]&quot;, &quot;&quot;, imgChoice1)&amp;#10;choice_trial_size=re.sub(&quot;[^0-9]&quot;, &quot;&quot;, imgChoice)&amp;#10;choice_trial_view=re.sub(&quot;[^0-9]&quot;, &quot;&quot;, imgChoice2)" valType="extendedCode"/>
+      </CodeComponent>
+      <ImageComponent name="upArrow1_2">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="upArrow1_2" valType="code"/>
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="pos" updates="constant" val="(0, 200)" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="image" updates="constant" val="stims/upArrow.png" valType="str"/>
+        <Param name="size" updates="constant" val="(40, 70)" valType="code"/>
+      </ImageComponent>
+      <ImageComponent name="leftArrow1_2">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="leftArrow1_2" valType="code"/>
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="pos" updates="constant" val="(-150, 0)" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="image" updates="constant" val="stims/leftArrow.png" valType="str"/>
+        <Param name="size" updates="constant" val="(70, 40)" valType="code"/>
+      </ImageComponent>
+      <ImageComponent name="rightArrow1_2">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="rightArrow1_2" valType="code"/>
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="pos" updates="constant" val="(150, 0)" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="image" updates="constant" val="stims/rightArrow.png" valType="str"/>
+        <Param name="size" updates="constant" val="(70, 40)" valType="code"/>
+      </ImageComponent>
+      <ImageComponent name="downArrow1_2">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="downArrow1_2" valType="code"/>
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="pos" updates="constant" val="(0, -200)" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="image" updates="constant" val="stims/downArrow.png" valType="str"/>
+        <Param name="size" updates="constant" val="(40, 70)" valType="code"/>
+      </ImageComponent>
+      <ImageComponent name="image_trial_2">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="image_trial_2" valType="code"/>
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="pos" updates="constant" val="(0,0)" valType="code"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="texture resolution" updates="constant" val="256" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="image" updates="set every frame" val="$imgChoice1" valType="str"/>
+        <Param name="size" updates="constant" val="(109, 271)" valType="code"/>
+      </ImageComponent>
+      <CodeComponent name="checkKeys_2">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="name" updates="None" val="checkKeys_2" valType="code"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="#key response&amp;#10;#if loops where pressing left, right, up or down will increase or decrease the integer of imgStart (see setImage_2 code component)&amp;#10;#as the min and max numbers for the stimuli are 1 and 10 for size, and 1 and 5 for orientation respectively,&amp;#10;#the 'else' command limits the number from going less or more than these integers&amp;#10;&amp;#10;#decrease size with left button&amp;#10;if event.getKeys(['left']):&amp;#10;  if imgStart&gt;1:&amp;#10;    imgStart=imgStart-1&amp;#10;  else:&amp;#10;    imgStart=1&amp;#10;&amp;#10;#increase size with right button&amp;#10;if event.getKeys(['right']):&amp;#10;  if imgStart&lt;10:&amp;#10;    imgStart=imgStart+1&amp;#10;  else:&amp;#10;    imgStart=10&amp;#10;&amp;#10;#rotate orientation left with down button&amp;#10;if event.getKeys(['down']):&amp;#10;  if imgStart2&gt;1:&amp;#10;    imgStart2=imgStart2-1&amp;#10;  else:&amp;#10;    imgStart2=1&amp;#10;&amp;#10;#roate orientation right with up button&amp;#10;if event.getKeys(['up']):&amp;#10;  if imgStart2&lt;5:&amp;#10;    imgStart2=imgStart2+1&amp;#10;  else:&amp;#10;    imgStart2=5" valType="extendedCode"/>
+      </CodeComponent>
+      <KeyboardComponent name="decisionButton_2">
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="decisionButton_2" valType="code"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="allowedKeys" updates="constant" val="'return'" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <TextComponent name="instructionsTrial_2">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="instructionsTrial_2" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="700" valType="code"/>
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="text" updates="constant" val="Please choose which image you think represented the average body shape&amp;#10;                                    from the previous display&amp;#10;&amp;#10;                  Use the 'left' and 'right' keys to change the body size&amp;#10;                 Use the 'up' and 'down' keys to change the body view" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 325)" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="20" valType="code"/>
+      </TextComponent>
+      <TextComponent name="pressEntText_2">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="pressEntText_2" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="600" valType="code"/>
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="text" updates="constant" val="press 'ENTER' to choose the image" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -300)" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="20" valType="code"/>
+      </TextComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <LoopInitiator loopType="TrialHandler" name="practice">
+      <Param name="conditionsFile" updates="None" val="Trial_lists/practice_SizeList1.csv" valType="str"/>
+      <Param name="name" updates="None" val="practice" valType="code"/>
+      <Param name="isTrials" updates="None" val="False" valType="bool"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="conditions" updates="None" val="[{'trial_dur': 2.5, 'actual_mean': 6, 'img15': u'stims/0_0_2.png', 'img14': u'stims/0_0_2.png', 'img13': u'stims/0_0_2.png', 'img12': u'stims/0_0_2.png', 'img11': u'stims/0_0_2.png', 'img10': u'stims/0_0_2.png', 'img9': u'stims/0_0_2.png', 'img8': u'stims/0_0_2.png', 'Std_dev': 0.0, 'num_imgs': 1, 'img3': u'stims/0_0_2.png', 'img2': u'stims/0_0_2.png', 'img1': u'stims/6_1_2.png', 'view_cond': 1, 'img7': u'stims/0_0_2.png', 'img6': u'stims/0_0_2.png', 'img5': u'stims/0_0_2.png', 'img4': u'stims/0_0_2.png'}, {'trial_dur': 2.5, 'actual_mean': 4, 'img15': u'stims/0_0_2.png', 'img14': u'stims/0_0_2.png', 'img13': u'stims/0_0_2.png', 'img12': u'stims/0_0_2.png', 'img11': u'stims/0_0_2.png', 'img10': u'stims/0_0_2.png', 'img9': u'stims/0_0_2.png', 'img8': u'stims/0_0_2.png', 'Std_dev': 3.9370039370000001, 'num_imgs': 5, 'img3': u'stims/2_2_2.png', 'img2': u'stims/1_2_2.png', 'img1': u'stims/1_2_2.png', 'view_cond': 2, 'img7': u'stims/0_0_2.png', 'img6': u'stims/0_0_2.png', 'img5': u'stims/10_2_2.png', 'img4': u'stims/6_2_2.png'}, {'trial_dur': 2.5, 'actual_mean': 7, 'img15': u'stims/0_0_2.png', 'img14': u'stims/0_0_2.png', 'img13': u'stims/0_0_2.png', 'img12': u'stims/0_0_2.png', 'img11': u'stims/0_0_2.png', 'img10': u'stims/10_3_2.png', 'img9': u'stims/9_3_2.png', 'img8': u'stims/9_3_2.png', 'Std_dev': 3.16227766, 'num_imgs': 10, 'img3': u'stims/4_3_2.png', 'img2': u'stims/3_3_2.png', 'img1': u'stims/1_3_2.png', 'view_cond': 3, 'img7': u'stims/9_3_2.png', 'img6': u'stims/9_3_2.png', 'img5': u'stims/9_3_2.png', 'img4': u'stims/7_3_2.png'}, {'trial_dur': 2.5, 'actual_mean': 5, 'img15': u'stims/10_4_2.png', 'img14': u'stims/8_4_2.png', 'img13': u'stims/8_4_2.png', 'img12': u'stims/8_4_2.png', 'img11': u'stims/8_4_2.png', 'img10': u'stims/8_4_2.png', 'img9': u'stims/6_4_2.png', 'img8': u'stims/4_4_2.png', 'Std_dev': 3.16227766, 'num_imgs': 15, 'img3': u'stims/1_4_2.png', 'img2': u'stims/1_4_2.png', 'img1': u'stims/1_4_2.png', 'view_cond': 4, 'img7': u'stims/4_4_2.png', 'img6': u'stims/4_4_2.png', 'img5': u'stims/2_4_2.png', 'img4': u'stims/2_4_2.png'}]" valType="str"/>
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+    </LoopInitiator>
+    <Routine name="trial_prac"/>
+    <Routine name="mask1"/>
+    <LoopTerminator name="practice"/>
+  </Flow>
+</PsychoPy2experiment>
